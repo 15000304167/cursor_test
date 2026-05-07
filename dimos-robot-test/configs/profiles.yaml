@@ -1,0 +1,25 @@
+# DimOS test profiles: blueprint + CLI flags (see dimos AGENTS.md)
+
+mcp_replay:
+  description: "Replay-backed agentic MCP (CI-friendly when data available)"
+  blueprint: unitree-go2-agentic-mcp
+  extra_args:
+    - "--replay"
+  daemon: true
+  mcp_port: 9990
+
+sim:
+  description: "Full simulation stack (heavier; may require mujoco marker)"
+  blueprint: unitree-g1-agentic-sim
+  extra_args:
+    - "--simulation"
+  daemon: true
+  mcp_port: null
+
+hardware:
+  description: "Real robot; requires ROBOT_IP + HARDWARE_TEST_ACK"
+  blueprint: unitree-go2-agentic-mcp
+  extra_args: []
+  daemon: true
+  mcp_port: 9990
+  requires_robot_ip: true

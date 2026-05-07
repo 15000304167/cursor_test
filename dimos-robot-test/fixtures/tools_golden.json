@@ -1,0 +1,6 @@
+{
+  "tools": [
+    "move"
+  ],
+  "_comment": "Replace with names from `dimos mcp list-tools` for your blueprint; used by contract tests."
+}

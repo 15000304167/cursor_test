@@ -1,0 +1,8 @@
+# Hardware test parameter bounds (enforced in tests + gates)
+
+velocity_forward_max_m_s: 0.35
+skill_call_timeout_s: 45
+allowed_robot_ip_prefixes:
+  - "192.168."
+  - "10."
+ci_forbid_hardware: true
